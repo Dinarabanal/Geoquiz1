@@ -8,8 +8,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
+
+  private static final String TAG = "MainActivity";
 
   private Button TrueButton;
   private Button FalseButton;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    Log.d(TAG, "onCreate(Bundle) called");
     setContentView(R.layout.activity_main);
     QuestionTextView = (TextView) findViewById(R.id.true_button);
 
